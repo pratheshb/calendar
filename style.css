@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+}
+
+#calendar {
+    width: min-content;
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+td,
+th {
+    border: 2px solid rgb(240, 240, 240);
+    padding: 8px;
+    text-align: center;
+}
+
+.tool-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.action button {
+    border: 1px solid rgb(240, 240, 240);
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.current-date {
+    background-color: rgb(240, 240, 240);
+    color: rgb(38, 132, 240);
+}
