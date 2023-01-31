@@ -38,9 +38,12 @@ function createTableBody() {
         const tr = document.createElement('tr');
         for (let j = 0; j < 7; j++) {
             const td = document.createElement('td');
-            td.textContent = currentDate >= lastDate || i == 0 && j < firstDay ? '' : ++currentDate;
-            if(isCurrentMonth && currentDate === new Date().getDate()) {
-                td.className = 'current-date'
+            const isEmpty = currentDate >= lastDate || (i == 0 && j < firstDay)
+            if(!isEmpty) {
+                td.textContent = ++currentDate;
+                if(isCurrentMonth && currentDate === new Date().getDate()) {
+                    td.className = 'current-date'
+                }
             }
             tr.append(td);
         }
